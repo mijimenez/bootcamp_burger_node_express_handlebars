@@ -21,13 +21,14 @@ $(function() {
     );
   });
 
+  // On submit, create new burger with user's entry name and a set "devour" state of 0 or "false", which puts it into the "Not devoured" list.
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     var newBurger = {
       burger_name: $("#ca").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+      devoured: 0
     };
 
     // Send the POST request.

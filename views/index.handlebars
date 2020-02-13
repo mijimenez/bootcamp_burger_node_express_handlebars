@@ -1,24 +1,28 @@
 <img src="/assets/img/burger.png" class="burger-image">
 
-<h2>Burgers that are not devoured!</h2>
+<div class="burger-lists my-5 d-flex flex-column flex-sm-row justify-content-between">
+  <div class="undevoured-list list-box flex-grow-1 m-2">
+    <h2 class="list-title glow">Not devoured:</h2>
+    <ul class="list-content">
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block devour=true}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+  <div class="devoured-list list-box flex-grow-1 m-2">
+    <h2 class="list-title glow">Devoured:</h2>
+    <ul class="list-content">
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block devour=false}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -28,11 +32,12 @@
     <input type="text" id="ca" name="burger_name">
   </div>
 
-  <div class="form-group">
+{{!-- This would give the option to set devour state upon burger creation--}}
+  {{!-- <div class="form-group">
     <label for="devoured">Devoured?</label><br>
     <input type="radio" name="devoured" value="1" checked> Devoured<br>
     <input type="radio" name="devoured" value="0"> To Eat
-  </div>
+  </div> --}}
 
   <button type="submit">Add Burger</button>
 </form>

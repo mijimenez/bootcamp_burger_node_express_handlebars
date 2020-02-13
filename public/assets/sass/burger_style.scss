@@ -13,7 +13,9 @@ $mq-medium: 768px;
 $mq-small: 576px;
 
 //Colors
-$c-theme: rgb(255, 115, 0);
+$c-theme: #ff0000;
+$c-theme-light: #ff2323;
+$c-theme2: rgb(255, 242, 58);
 $c-white: #fff;
 $c-black: #000;
 
@@ -64,7 +66,7 @@ $c-black: #000;
   h6 {
     margin: 0 0 1rem 0;
     line-height: 1.2;
-    font-weight: normal;
+    font-weight: bold;
   }
   
   
@@ -82,6 +84,7 @@ $c-black: #000;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    color: $c-theme2;
   }
   
   a {
@@ -94,6 +97,26 @@ $c-black: #000;
       color: $c-white;
     }
   }
+
+
+  // =================================
+//	Buttons
+// =================================
+button {
+    background-color: $c-theme;
+    border: thin solid transparent;
+    border-radius: 6px;
+    color: $c-white;
+    font-weight: bold;
+    font-size: .8em;
+    text-transform: uppercase;
+    transition: all .5s;
+    &:focus, &:hover {
+        border: thin solid $c-theme;
+        background-color: transparent;
+        color: $c-theme;
+    }
+}
   
   // =================================
 //	Layout
@@ -102,9 +125,46 @@ $c-black: #000;
   body {
       background-color: $c-black;
       .burger-image {
-        width: 100%;
+        width: 50%;
         max-width: 360px;
       }
+      .burger-lists {
+          @include center(90%, $mq-large);
+      }
+        .list-box { 
+            border: $c-theme2 1px solid; 
+        }
+
+        .list-title { 
+            position: relative; 
+            top : -0.5em;
+            padding: 0 1em;
+            display: inline; 
+            background-color: $c-black; 
+        }
+
+        .list-content {
+            text-align: left;
+            padding: 2em;
+            font-size: 1.2em;
+        }
   }
+
+
+//   .glow {
+//     -webkit-animation: glow 1s ease-in-out infinite alternate;
+//     -moz-animation: glow 1s ease-in-out infinite alternate;
+//     animation: glow 1s ease-in-out infinite alternate;
+//   }
+  
+//   @-webkit-keyframes glow {
+//     from {
+//         text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px $c-theme, 0 0 80px $c-theme, 0 0 100px $c-theme, 0 0 120px $c-theme, 0 0 140px $c-theme;
+//       }
+      
+//       to {
+//         text-shadow: 0 0 40px #fff, 0 0 60px $c-theme-light, 0 0 80px $c-theme-light, 0 0 100px $c-theme-light, 0 0 120px $c-theme-light, 0 0 140px $c-theme-light, 0 0 160px $c-theme-light;
+//       }
+//   }
 
 

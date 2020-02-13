@@ -5,7 +5,7 @@
 
 body {
   text-align: center;
-  color: #ff7300;
+  color: #ff0000;
   margin: 0;
   font-family: "Poiret One", cursive;
 }
@@ -18,7 +18,7 @@ h5,
 h6 {
   margin: 0 0 1rem 0;
   line-height: 1.2;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 p,
@@ -35,6 +35,7 @@ ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  color: #fff23a;
 }
 
 a {
@@ -48,12 +49,55 @@ a:hover, a:focus {
   color: #fff;
 }
 
+button {
+  background-color: #ff0000;
+  border: thin solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: .8em;
+  text-transform: uppercase;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+button:focus, button:hover {
+  border: thin solid #ff0000;
+  background-color: transparent;
+  color: #ff0000;
+}
+
 body {
   background-color: #000;
 }
 
 body .burger-image {
-  width: 100%;
+  width: 50%;
   max-width: 360px;
+}
+
+body .burger-lists {
+  width: 90%;
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .list-box {
+  border: #fff23a 1px solid;
+}
+
+body .list-title {
+  position: relative;
+  top: -0.5em;
+  padding: 0 1em;
+  display: inline;
+  background-color: #000;
+}
+
+body .list-content {
+  text-align: left;
+  padding: 2em;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=burger_style.css.map */
