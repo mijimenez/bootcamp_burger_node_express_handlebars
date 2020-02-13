@@ -1,0 +1,59 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  color: #ff7300;
+  margin: 0;
+  font-family: "Poiret One", cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+p,
+ul,
+ol,
+blockquote,
+address {
+  margin: 0 0 1rem 0;
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+a:hover, a:focus {
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+body .burger-image {
+  width: 100%;
+  max-width: 360px;
+}
+/*# sourceMappingURL=burger_style.css.map */

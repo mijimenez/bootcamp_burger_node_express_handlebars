@@ -1,0 +1,110 @@
+// =================================
+//	Variables
+// =================================
+//Font Stacks
+$f-font: 'Poiret One', cursive;
+
+
+// Breakpoints
+$mq-xxLarge: 1400px;
+$mq-xLarge: 1200px;
+$mq-large: 992px;
+$mq-medium: 768px;
+$mq-small: 576px;
+
+//Colors
+$c-theme: rgb(255, 115, 0);
+$c-white: #fff;
+$c-black: #000;
+
+
+// =================================
+//	Mixins
+// =================================
+@mixin center($width, $max-width) {
+	width: $width;
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin box-shadow {
+	-webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+}
+
+@mixin box-shadow-right {
+    -webkit-box-shadow: 3px 3px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px -2px rgba(0,0,0,0.75);
+}
+
+
+// =================================
+//	Type
+// =================================
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+      text-align: center;
+      color: $c-theme;
+      margin: 0;
+      font-family: $f-font;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    font-weight: normal;
+  }
+  
+  
+  p,
+  ul,
+  ol,
+  blockquote,
+  address {
+    margin: 0 0 1rem 0;
+    font-style: normal;
+  }
+  
+  ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+      text-decoration: none;
+      color: $c-white;
+      transition: all .5s;
+  
+    &:hover,
+    &:focus {
+      color: $c-white;
+    }
+  }
+  
+  // =================================
+//	Layout
+// =================================
+
+  body {
+      background-color: $c-black;
+      .burger-image {
+        width: 100%;
+        max-width: 360px;
+      }
+  }
+
+
