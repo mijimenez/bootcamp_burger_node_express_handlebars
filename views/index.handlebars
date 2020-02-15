@@ -1,9 +1,9 @@
 <img src="/assets/img/burger.png" class="burger-image">
 
-<p class="intro">Add a burger to the "Not Devoured" section. Once added, you can devour the burger and it will be shifted to the "Devoured" section.</p>
+<p class="intro">Add a burger to the "Not Devoured" section. Once added, you can devour the burger and it will be moved to the "Devoured" section.</p>
 
-<div class="burger-lists my-5 d-flex flex-column flex-sm-row justify-content-between">
-  <div class="undevoured-list list-box m-2">
+<div class="burger-lists mt-5 d-flex flex-column flex-sm-row justify-content-between">
+  <div class="undevoured-list list-box my-2 my-sm-0 mr-sm-2">
     <h2 class="list-title glow">Not devoured:</h2>
     <ul class="list-content" id="not-d-list">
       {{#each burgers}}
@@ -14,7 +14,7 @@
     </ul>
   </div>
 
-  <div class="devoured-list list-box m-2">
+  <div class="devoured-list list-box my-2 my-sm-0 ml-sm-2">
     <h2 class="list-title glow">Devoured:</h2>
     <ul class="list-content" id="not-d-list">
       {{#each burgers}}
@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="add-burger-section">
+<div class="add-burger-section mt-4">
   <h2>Add a Burger</h2>
   <form class="create-form">
 

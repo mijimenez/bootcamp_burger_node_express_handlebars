@@ -69,6 +69,13 @@ $c-black: #000;
     line-height: 1.2;
     font-weight: bold;
   }
+
+  h2 {
+    font-size: 1.6em;
+    @media (min-width: $mq-small) {
+        font-size: 2em;
+    }
+  }
   
   
   p,
@@ -132,7 +139,7 @@ button {
         max-width: 300px;
     }
     .intro {
-        @include center(90%, $mq-small);
+        @include center(80%, $mq-small);
     }
     .burger-lists {
         @include center(90%, $mq-large);

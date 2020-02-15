@@ -21,6 +21,16 @@ h6 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 1.6em;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
 p,
 ul,
 ol,
@@ -79,7 +89,7 @@ body .burger-image {
 }
 
 body .intro {
-  width: 90%;
+  width: 80%;
   max-width: 576px;
   margin-left: auto;
   margin-right: auto;
