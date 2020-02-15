@@ -8,6 +8,7 @@ var burger = require("../models/burger.js");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.selectAll(function(data) {
+    // Filter burgers by devoured state for access on the list displays
     const eatenBurgers = data.filter(burger => burger.devoured === 1);
     const notEatenBurgers = data.filter(burger => burger.devoured === 0);
     var hbsObject = {

@@ -73,10 +73,13 @@ button {
   transition: all .5s;
 }
 
-button:focus, button:hover {
+button:focus, button:hover, button:active {
   border: thin solid #ff0000;
   background-color: transparent;
   color: #ff0000;
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body {
@@ -116,6 +119,12 @@ body .burger-lists {
 
 body .burger-lists li {
   padding-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  body .burger-lists li {
+    text-align: left;
+  }
 }
 
 body .list-box {

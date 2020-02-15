@@ -121,10 +121,12 @@ button {
     font-size: .8em;
     text-transform: uppercase;
     transition: all .5s;
-    &:focus, &:hover {
+    &:focus, &:hover, &:active {
         border: thin solid $c-theme;
         background-color: transparent;
         color: $c-theme;
+        outline: none !important;
+        box-shadow: none;
     }
 }
   
@@ -150,6 +152,9 @@ button {
         }
         li {
             padding-bottom: 1em;
+            @media (min-width: $mq-medium) {
+              text-align: left;
+            }
         }
     }
     .list-box { 
