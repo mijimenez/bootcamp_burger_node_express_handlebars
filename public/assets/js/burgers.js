@@ -1,20 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
 
-  // Display boxes
-  function init() {
-    if(!$("#not-d-list").has('li').length) {
-      $("#not-d-list").replaceWith('<p>Sorry, this is empty</p>');
-    }
-  
-    if(!$("#d-list").has('li').length) {
-      $("#d-list").replaceWith('<p>Sorry, this is empty</p>');
-    }
-  }
-
-  init();
-
-
   $(".change-devour").on("click", function(event) {
     var id = $(this).data("id");
     var newDevour = $(this).data("newdevour");

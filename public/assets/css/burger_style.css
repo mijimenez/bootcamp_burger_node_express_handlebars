@@ -86,6 +86,7 @@ body {
 body .burger-image {
   width: 50%;
   max-width: 300px;
+  margin-top: 2%;
 }
 
 body .intro {
@@ -140,6 +141,7 @@ body .add-burger-section {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10%;
 }
 
 body .add-burger-section .add-burger-btn {

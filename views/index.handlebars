@@ -5,22 +5,24 @@
 <div class="burger-lists mt-5 d-flex flex-column flex-sm-row justify-content-between">
   <div class="undevoured-list list-box my-2 my-sm-0 mr-sm-2">
     <h2 class="list-title glow">Not devoured:</h2>
+    <p id="not-d-message" style="display:none">Empty!</p>
     <ul class="list-content" id="not-d-list">
-      {{#each burgers}}
-        {{#unless devoured}}
+      {{#each notEaten}}
           {{> burgers/burger-block devour=true}}
-        {{/unless}}
-      {{/each}}
+        {{else}}
+        <p>Add a burger.</p>
+      {{/each}} 
     </ul>
   </div>
 
   <div class="devoured-list list-box my-2 my-sm-0 ml-sm-2">
     <h2 class="list-title glow">Devoured:</h2>
+    <p id="d-message" style="display:none">Empty!</p>
     <ul class="list-content" id="not-d-list">
-      {{#each burgers}}
-        {{#if devoured}}
+      {{#each eaten}}
           {{> burgers/burger-block devour=false}}
-        {{/if}}
+        {{else}}
+        <p>Nothing devoured yet.</p>
       {{/each}}
     </ul>
   </div>

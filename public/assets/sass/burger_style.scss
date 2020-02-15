@@ -137,6 +137,7 @@ button {
     .burger-image {
         width: 50%;
         max-width: 300px;
+        margin-top: 2%;
     }
     .intro {
         @include center(80%, $mq-small);
@@ -168,10 +169,10 @@ button {
     }
     .add-burger-section {
         @include center(90%, $mq-tiny);
+        margin-bottom: 10%;
         .add-burger-btn {
             border-radius: 0 6px 6px 0;
         }
     }
   }
-
 
