@@ -11,11 +11,12 @@ $mq-xLarge: 1200px;
 $mq-large: 992px;
 $mq-medium: 768px;
 $mq-small: 576px;
+$mq-tiny: 400px;
 
 //Colors
 $c-theme: #ff0000;
 $c-theme-light: #ff2323;
-$c-theme2: rgb(255, 242, 58);
+$c-theme2: rgb(253, 241, 78);
 $c-white: #fff;
 $c-black: #000;
 
@@ -74,9 +75,11 @@ $c-black: #000;
   ul,
   ol,
   blockquote,
-  address {
+  address,
+  label {
     margin: 0 0 1rem 0;
     font-style: normal;
+    color: $c-theme2;
   }
   
   ul,
@@ -123,48 +126,45 @@ button {
 // =================================
 
   body {
-      background-color: $c-black;
-      .burger-image {
+    background-color: $c-black;
+    .burger-image {
         width: 50%;
-        max-width: 360px;
-      }
-      .burger-lists {
-          @include center(90%, $mq-large);
-      }
-        .list-box { 
-            border: $c-theme2 1px solid; 
+        max-width: 300px;
+    }
+    .intro {
+        @include center(90%, $mq-small);
+    }
+    .burger-lists {
+        @include center(90%, $mq-large);
+        @media (min-width: $mq-medium) {
+            display: flex;
+            justify-content: space-between;
         }
-
-        .list-title { 
-            position: relative; 
-            top : -0.5em;
-            padding: 0 1em;
-            display: inline; 
-            background-color: $c-black; 
+        li {
+            padding-bottom: 1em;
         }
-
-        .list-content {
-            text-align: left;
-            padding: 2em;
-            font-size: 1.2em;
+    }
+    .list-box { 
+        border: $c-theme2 1px solid;
+        border-radius: 7px;
+        width: 100%;
+    }
+    .list-title { 
+        position: relative; 
+        top : -0.5em;
+        padding: 0 1em;
+        display: inline; 
+        background-color: $c-black; 
+    }
+    .list-content {
+        padding: 1em 2em 2em;;
+    }
+    .add-burger-section {
+        @include center(90%, $mq-tiny);
+        .add-burger-btn {
+            border-radius: 0 6px 6px 0;
         }
+    }
   }
-
-
-//   .glow {
-//     -webkit-animation: glow 1s ease-in-out infinite alternate;
-//     -moz-animation: glow 1s ease-in-out infinite alternate;
-//     animation: glow 1s ease-in-out infinite alternate;
-//   }
-  
-//   @-webkit-keyframes glow {
-//     from {
-//         text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px $c-theme, 0 0 80px $c-theme, 0 0 100px $c-theme, 0 0 120px $c-theme, 0 0 140px $c-theme;
-//       }
-      
-//       to {
-//         text-shadow: 0 0 40px #fff, 0 0 60px $c-theme-light, 0 0 80px $c-theme-light, 0 0 100px $c-theme-light, 0 0 120px $c-theme-light, 0 0 140px $c-theme-light, 0 0 160px $c-theme-light;
-//       }
-//   }
 
 

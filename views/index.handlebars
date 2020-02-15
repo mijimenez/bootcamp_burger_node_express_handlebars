@@ -1,9 +1,11 @@
 <img src="/assets/img/burger.png" class="burger-image">
 
+<p class="intro">Add a burger to the "Not Devoured" section. Once added, you can devour the burger and it will be shifted to the "Devoured" section.</p>
+
 <div class="burger-lists my-5 d-flex flex-column flex-sm-row justify-content-between">
-  <div class="undevoured-list list-box flex-grow-1 m-2">
+  <div class="undevoured-list list-box m-2">
     <h2 class="list-title glow">Not devoured:</h2>
-    <ul class="list-content">
+    <ul class="list-content" id="not-d-list">
       {{#each burgers}}
         {{#unless devoured}}
           {{> burgers/burger-block devour=true}}
@@ -12,9 +14,9 @@
     </ul>
   </div>
 
-  <div class="devoured-list list-box flex-grow-1 m-2">
+  <div class="devoured-list list-box m-2">
     <h2 class="list-title glow">Devoured:</h2>
-    <ul class="list-content">
+    <ul class="list-content" id="not-d-list">
       {{#each burgers}}
         {{#if devoured}}
           {{> burgers/burger-block devour=false}}
@@ -24,20 +26,27 @@
   </div>
 </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+<div class="add-burger-section">
+  <h2>Add a Burger</h2>
+  <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
-  </div>
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <input type="text" id="ca" name="burger_name" class="form-control" placeholder="Burger Name" aria-label="Burger Name" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="add-burger-btn" type="submit" id="button-addon2">Add Burger</button>
+        </div>
+      </div>
+    </div>
 
-{{!-- This would give the option to set devour state upon burger creation--}}
-  {{!-- <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured<br>
-    <input type="radio" name="devoured" value="0"> To Eat
-  </div> --}}
+  {{!-- This would give the option to set devour state upon burger creation--}}
+    {{!-- <div class="form-group">
+      <label for="devoured">Devoured?</label><br>
+      <input type="radio" name="devoured" value="1" checked> Yep<br>
+      <input type="radio" name="devoured" value="0"> Nope
+    </div> --}}
 
-  <button type="submit">Add Burger</button>
-</form>
+    {{!-- <button type="submit">Add Burger</button> --}}
+
+  </form>
+</div>

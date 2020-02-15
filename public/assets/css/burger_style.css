@@ -25,9 +25,11 @@ p,
 ul,
 ol,
 blockquote,
-address {
+address,
+label {
   margin: 0 0 1rem 0;
   font-style: normal;
+  color: #fdf14e;
 }
 
 ul,
@@ -35,7 +37,7 @@ ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  color: #fff23a;
+  color: #fdf14e;
 }
 
 a {
@@ -73,7 +75,14 @@ body {
 
 body .burger-image {
   width: 50%;
-  max-width: 360px;
+  max-width: 300px;
+}
+
+body .intro {
+  width: 90%;
+  max-width: 576px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body .burger-lists {
@@ -83,8 +92,25 @@ body .burger-lists {
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  body .burger-lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+body .burger-lists li {
+  padding-bottom: 1em;
+}
+
 body .list-box {
-  border: #fff23a 1px solid;
+  border: #fdf14e 1px solid;
+  border-radius: 7px;
+  width: 100%;
 }
 
 body .list-title {
@@ -96,8 +122,17 @@ body .list-title {
 }
 
 body .list-content {
-  text-align: left;
-  padding: 2em;
-  font-size: 1.2em;
+  padding: 1em 2em 2em;
+}
+
+body .add-burger-section {
+  width: 90%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .add-burger-section .add-burger-btn {
+  border-radius: 0 6px 6px 0;
 }
 /*# sourceMappingURL=burger_style.css.map */
