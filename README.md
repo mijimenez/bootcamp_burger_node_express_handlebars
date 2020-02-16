@@ -6,6 +6,9 @@ Burgers is a restaurant app that lets users input the names of burgers they'd li
 
 ![Demo](./public/assets/img/demo.gif)
 
+## Live Link
+- Launch the application [here](https://gentle-fortress-17484.herokuapp.com/)
+
 ## Technologies Used
 - HTML5
 - CSS3
