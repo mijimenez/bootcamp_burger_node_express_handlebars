@@ -153,6 +153,14 @@ body .add-burger-section {
   margin-bottom: 10%;
 }
 
+body .add-burger-section input[type="text"]:focus,
+body .add-burger-section input[type="text"]:hover,
+body .add-burger-section input[type="text"]:active {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 body .add-burger-section .add-burger-btn {
   border-radius: 0 6px 6px 0;
 }

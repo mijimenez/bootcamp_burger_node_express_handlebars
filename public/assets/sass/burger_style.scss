@@ -175,6 +175,12 @@ button {
     .add-burger-section {
         @include center(90%, $mq-tiny);
         margin-bottom: 10%;
+        input[type="text"]:focus,
+        input[type="text"]:hover,
+        input[type="text"]:active {
+          outline: none !important;
+          box-shadow: none;
+        }
         .add-burger-btn {
             border-radius: 0 6px 6px 0;
         }
